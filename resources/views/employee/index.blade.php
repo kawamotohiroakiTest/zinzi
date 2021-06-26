@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@include('parts.header')
+
+
 <body>
-    fdafsdfasdf
+    <ul class=".font-weight-bold">
+    @foreach($employee as $key => $emp)
+        <li>{{ $key }}　は　{{ $emp->name }}　です</li>
+    @endforeach
+    </ul>
+
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+
 </body>
 </html>
