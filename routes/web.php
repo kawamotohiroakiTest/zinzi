@@ -21,4 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', 'EmployeeController@index');
+
+Route::group(['prefix'=>'employee'], function () {
+    Route::get('index', 'EmployeeController@index')->name('employee.index');
+    Route::get('create', 'EmployeeController@create')->name('employee.create');
+    Route::post('store', 'EmployeeController@store')->name('employee.store');
+    Route::get('show/{id}', 'EmployeeController@show')->name('employee.show');
+  });
