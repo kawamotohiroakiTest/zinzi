@@ -51,16 +51,31 @@ class EmployeeController extends Controller
     
     public function edit($id)
     {
-        //
+      $employee=Employee::find($id);
+  
+      return view('employee/edit', compact('employee'));
+
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id )
     {
-        //
+        $employee = Employee::find($id);
+        $employee->name = $request->input('name');
+        $employee->telephone = $request->input('telephone');
+        $employee->email = $request->input('email');
+
+        $employee->save();
+
+        return redirect('employee/index');
+
     }
 
     public function destroy($id)
     {
-        //
+      $employee=Employee::find($id);
+      $employee->delete();
+  
+      return redirect('employee/index');
+
     }
 }

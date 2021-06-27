@@ -10,6 +10,7 @@
             <th>電話番号</th>
             <th>メールアドレス</th>
             <th>詳細</th>
+            <th>編集</th>
         </tr>
         @foreach($employees as $employee)
         <tr>
@@ -18,6 +19,7 @@
             <td>{{$employee->telephone}}</td>
             <td>{{$employee->email}}</td>
             <td><a href="{{route('employee.show',['id'=>$employee->id])}}">詳細</a></td>
+            <td><a href="{{route('employee.edit',['id'=>$employee->id])}}">編集</a></td>
         </tr>
         @endforeach
     </table>
