@@ -31,3 +31,7 @@ Route::group(['prefix'=>'employee'], function () {
     Route::post('update/{id}', 'EmployeeController@update')->name('employee.update');
     Route::post('destroy/{id}', 'EmployeeController@destroy')->name('employee.destroy');
   });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
