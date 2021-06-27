@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Employee;
+use App\Http\Requests\StoreMember;
+use App\Http\Requests\UpdateMember;
+
+
 
 
 
@@ -26,7 +30,11 @@ class EmployeeController extends Controller
       return view('employee/create');
     }
 
-    public function store(Request $request)
+
+
+    //public function store(Request $request)
+    //↓変更
+    public function store(StoreMember $request)
     {
 
         $employee=new Employee;
@@ -57,7 +65,7 @@ class EmployeeController extends Controller
 
     }
 
-    public function update(Request $request, $id )
+    public function update(UpdateMember $request, $id )
     {
         $employee = Employee::find($id);
         $employee->name = $request->input('name');
