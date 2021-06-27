@@ -19,7 +19,9 @@ class EmployeeController extends Controller
     //memberテーブルからname,telephone,emailを$membersに格納
     $employees=DB::table('employees')
       ->select('id', 'name', 'telephone', 'email')
-      ->get();
+      // ->get();
+      //↓ 1ページに表示する件数を指定
+      ->paginate(5);
 
     //viewを返す(compactでviewに$membersを渡す)
     return view('employee/index', compact('employees'));

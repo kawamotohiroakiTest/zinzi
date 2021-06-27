@@ -20,9 +20,13 @@
             <td>{{$employee->email}}</td>
             <td><a href="{{route('employee.show',['id'=>$employee->id])}}">詳細</a></td>
             <td><a href="{{route('employee.edit',['id'=>$employee->id])}}">編集</a></td>
+
         </tr>
         @endforeach
     </table>
+    {{$employees->links()}}
+
+    
     <a href="{{ route('employee.create') }}">{{ __('新規作成') }}</a>
 </body>
 </html>
