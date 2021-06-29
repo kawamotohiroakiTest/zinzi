@@ -1,3 +1,125 @@
 ul {
     list-style-type: none
 }
+/* toggle.blade.php */
+.relative {
+    position: relative;
+}
+.toggle-button {
+    position:absolute;
+    top:17px;
+    left:400px;
+    cursor:pointer;
+}
+.relative > ul {
+    background-color: aquamarine;
+}
+/* toggle.blade.php */
+
+/* alert.blade.php */
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+#alertBox {
+    margin: auto 0;
+    text-align: center;
+}
+#ok {
+    margin: auto 0;
+}
+/* alert.blade.php */
+
+/* viewer.blade.php */
+figure > img {
+    width: 640px;
+    height: 400px;
+}
+.viewerli {
+    float: left;
+}
+.viewer {
+    width: 80px;
+    height: 50px;
+}
+/* viewer.blade.php */
+
+/* tab.blade.php */
+.mg200 {
+    margin-top: 200px;
+}
+.mg50 {
+    margin-top: 50px;
+}
+.tab > li {
+    float: left;
+}
+li > .current {
+    background-color: black;
+}
+.current_tab {
+    background-color:aquamarine;
+}
+/* tab.blade.php */
+
+
+
+/* dropdown.blade.php */
+#navi > li {
+    float: left;
+    margin-right: 100px;
+}
+ul ul {
+    display: none;
+    background-color: aquamarine;
+}
+/* dropdown.blade.php */
+
+/* floating.blade.php */
+
+.floating-relative {
+    position: relative;
+}
+.floating-relative > ul {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+.floating-main {
+    margin-left: 200px;
+}
+.floating-displaynone{
+    display: none;
+}
+/* floating.blade.php */
+
+/* modalwindow.blade.php */
+
+.modalwindow {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+#modal_bg {
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,4);
+}
+#modal_photo {
+    position:absolute;
+    top:5000px;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    width:300px;
+    height:300px;
+}
+/* modalwindow.blade.php */

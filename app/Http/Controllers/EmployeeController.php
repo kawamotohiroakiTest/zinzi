@@ -8,6 +8,9 @@ use App\Employee;
 use App\Http\Requests\StoreMember;
 use App\Http\Requests\UpdateMember;
 
+use Illuminate\Support\Facades\Log;
+
+
 
 
 
@@ -87,5 +90,15 @@ class EmployeeController extends Controller
   
       return redirect('employee/index');
 
+    }
+
+    public function toggle()
+    {
+      $employees=DB::table('employees')
+      ->select('id', 'name', 'telephone', 'email')
+      // ->get();
+      //↓ 1ページに表示する件数を指定
+      ->paginate(5);
+      return view('employee/toggle', compact('employees'));
     }
 }
