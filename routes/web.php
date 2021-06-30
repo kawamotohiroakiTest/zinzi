@@ -32,7 +32,7 @@ Route::group(['prefix'=>'employee'], function () {
     Route::post('destroy/{id}', 'EmployeeController@destroy')->name('employee.destroy');
 
     Route::get('toggle/{id?}', 'EmployeeController@toggle')->name('employee.toggle');
-
+    Route::post('toggle/{id?}', 'EmployeeController@toggle')->name('employee.toggle');
   });
 
 Auth::routes();

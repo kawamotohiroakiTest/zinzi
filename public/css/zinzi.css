@@ -123,3 +123,22 @@ ul ul {
     height:300px;
 }
 /* modalwindow.blade.php */
+
+/* filter.blade.php */
+.filter_list > li {
+    float: left;
+}
+.filter_img {
+    width: 120px;
+    height: 120px;
+}
+/* filter.blade.php */
+
+/* slide_nav.blade.php */
+.slide_nav{
+    top:0;
+    bottom:0;
+    width:250px;
+    margin-left: -250px;
+}
+/* slide_nav.blade.php */

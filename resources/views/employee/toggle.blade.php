@@ -146,3 +146,66 @@ print({{$employees}})
             </a>
         </li>
     </ul>
+
+<h1 class="mg200">フィルタリング</h1>
+<div id="buttons">
+    <button value="all">ALL</button>
+    <button value="javascript">javascript</button>
+    <button value="php">PHP</button>
+    <button value="python">Python</button>
+</div>
+<ul class="filter_list">
+    <li class="javascript fileter_list_li"><img src="{{ asset('/img/javascript-960x504.png') }}" class="filter_img"></li>
+    <li class="php fileter_list_li"><img src="{{ asset('/img/PHP-logo.svg') }}" class="filter_img"></li>
+    <li class="python fileter_list_li"><img src="{{ asset('/img/Python.png') }}" class="filter_img"></li>
+</ul>
+
+<h1 class="mg200">バリデーション</h1>
+<form method="POST" action="{{route('employee.toggle')}}">
+    <div id="textSection">
+        <p><label for="text">Text</label></p>
+        <p class="alert">Alert: Text</p>
+        <input type="text" id="text" name="text" value="">
+    </div>
+    <div id="radioSection">
+        <p>Radio</p>
+        <p class="alert">Alert: Radio</p>
+        <input type="radio"  id="radio1" name="radio" value="Radio1">
+        <p><label for="radio1">Radio1</label></p>
+        <input type="radio"  id="radio2" name="radio" value="Radio2">
+        <p><label for="radio2">Radio2</label></p>
+        <input type="radio"  id="radio3" name="radio" value="Radio3">
+        <p><label for="radio3">Radio3</label></p>
+    </div>
+    <div id="selectArea">
+        <p>Select</p>
+        <p class="alert">Alert: Select</p>
+        <select>
+            <option value="none" class="select_none">---</option>
+            <option value="Select1">Select1</option>
+            <option value="Select2">Select2</option>
+            <option value="Select3">Select3</option>
+        </select>
+    </div>
+    <input type="submit" id="submitBtn">
+</form>
+
+
+<h1 class="mg200">スライドメニュー</h1>
+<button id="slide_nav">メニューがスライドする</button>
+<nav class="slide_nav" id="slide_nav">
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
+
+
+
+
+

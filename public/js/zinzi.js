@@ -91,7 +91,6 @@ $(function(){
         $("#modal_photo").hide();
         //imgを追加
         $("#modal_photo").html("<img>");
-        alert($(this).attr("src"));
         $("#modal_photo img").attr("src", $(this).attr("src"));
         $("#modal_photo img").attr("widht", 640);
         $("#modal_photo img").attr("height", 640);
@@ -111,7 +110,71 @@ $(function(){
         return false;
     });
 });
-
-
 /* modalwindow.blade.php */
+
+/* filter.blade.php */
+$(function(){
+    $("button").click(function(){
+        var target = $(this).attr("value");
+        console.log(target);
+
+        $(".fileter_list_li").each(function(){
+            $(this).animate({"opacity":0}, 300, function(){
+                $(this).hide();
+                
+                if($(this).hasClass(target) || target == "all"){
+                    $(this).show();
+                    $(this).animate({"opacity":1}, 300);
+                }
+            })
+        });
+    });
+});
+/* filter.blade.php */
+
+/* validation.blade.php */
+$(function(){
+    $(".alert").hide();
+
+    $("#submitBtn").click(function(){
+        var sendFlag = true;
+
+        if(!$("#text").val()){
+            $("#textSection .alert").show();
+            var sendFlag = false;
+        } else {
+            $("#textSection .alert").hide();           
+        }
+
+        var radioChk = $('input[name="radio"]:checked').length;
+        if(radioChk == 0){
+            $("#radioSection .alert").show();
+            var sendFlag = false;
+        } else {
+            $("#radioSection .alert").hide();           
+        }
+
+        if(sendFlag == false){
+            return false;
+        }
+    });
+});
+/* validation.blade.php */
+
+
+/* slide_nav.blade.php */
+$(function(){
+    var clickCount = 0;
+    $("#slide_nav").click(function(){
+        clickCount++;
+        if(clickCount % 2 == 0){
+            $("nav").animate({"margin-left":"-=250px"},200);
+        } else {
+            $("nav").animate({"margin-left":"+=250px"},200);
+        }
+    });
+});
+/* slide_nav.blade.php */
+
+
 
